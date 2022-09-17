@@ -1,0 +1,233 @@
+<FrameLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/inventory"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ProgressBar
+                android:id="@+id/progBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:progress="5" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgHeart1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    tools:srcCompat="@drawable/hearts" />
+
+                <ImageView
+                    android:id="@+id/imgHeart2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    tools:srcCompat="@drawable/hearts" />
+
+                <ImageView
+                    android:id="@+id/imgHeart3"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    tools:srcCompat="@drawable/hearts" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/lblInventory"
+                android:layout_width="500dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/medievalsharp"
+                android:text="Inventory"
+                android:textAlignment="center"
+                android:textColor="@android:color/background_dark"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/containOrbs"
+                android:layout_width="350dp"
+                android:layout_height="100dp"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/imgGreen"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    tools:srcCompat="@drawable/greenorb" />
+
+                <ImageView
+                    android:id="@+id/imgRed"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="25dp"
+                    tools:srcCompat="@drawable/redorb" />
+
+                <ImageView
+                    android:id="@+id/imgBlue"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_weight="1"
+                    tools:srcCompat="@drawable/blueorb" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/containDecoder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="25dp"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/imgDecoder"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/decoder" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/txtDecode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:fontFamily="@font/medievalsharp"
+                        android:inputType="textPersonName"
+                        android:text="(Decode Text)"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="18sp" />
+
+                    <Button
+                        android:id="@+id/btnDecode"
+                        android:layout_width="250dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/buttonimage"
+                        android:fontFamily="@font/medievalsharp"
+                        android:onClick="decode"
+                        android:text="Decode"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/containMessages"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/lblDecoded"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/medievalsharp"
+                        android:text="Decoded Messages: "
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <ListView
+                        android:id="@+id/scrPaper"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:background="@drawable/paper" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="75dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="25dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/imgHammer"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            app:srcCompat="@drawable/hammer" />
+
+                        <ImageView
+                            android:id="@+id/imgLighter"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            app:srcCompat="@drawable/lighter" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="300dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/paper">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/lblNotepad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/medievalsharp"
+                        android:text="Notepad:"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/txtNotepad"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text="TypeHere" />
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+</ScrollView>
+</FrameLayout>

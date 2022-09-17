@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/tower"
+    tools:context=".Tower">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/lblTowerTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/medievalsharp"
+            android:text="Tower"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_light"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/controlPanel"
+            android:layout_width="400dp"
+            android:layout_height="212dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="250dp"
+            android:background="@drawable/controlpanel"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <Switch
+                android:id="@+id/swTower1"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:background="#344CD3"
+                android:fontFamily="@font/medievalsharp"
+                android:text="Star"
+                android:textColor="@android:color/background_light"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <Switch
+                android:id="@+id/swTower2"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#344CD3"
+                android:fontFamily="@font/medievalsharp"
+                android:text="Vortex"
+                android:textColor="@android:color/background_light"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <Switch
+                android:id="@+id/swTower3"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#344CD3"
+                android:fontFamily="@font/medievalsharp"
+                android:text="Moon"
+                android:textColor="@android:color/background_light"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <Switch
+                android:id="@+id/swTower4"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#344CD3"
+                android:fontFamily="@font/medievalsharp"
+                android:text="Sun"
+                android:textColor="@android:color/background_light"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnTowerComplete"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/buttonimage"
+                android:fontFamily="@font/medievalsharp"
+                android:text="Check Answer"
+                android:textColor="@android:color/background_light"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+</FrameLayout>

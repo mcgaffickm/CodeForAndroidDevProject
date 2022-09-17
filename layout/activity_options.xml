@@ -1,0 +1,154 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/options"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/lblOptions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/medievalsharp"
+        android:paddingTop="50dp"
+        android:text="Extra Options"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textSize="30sp"
+        android:typeface="serif" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+    <TextView
+        android:id="@+id/lblPhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/medievalsharp"
+        android:text="Enter your Phone Number:"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/txtPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:fontFamily="@font/medievalsharp"
+                android:hint="XXX-XXX-XXXX"
+                android:inputType="phone"
+                android:text="XXXXXXXXXX"
+                android:textColor="@android:color/background_light" />
+
+    <TextView
+        android:id="@+id/lblPuzzleOptions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/medievalsharp"
+        android:text="Puzzle Options:"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp" />
+
+    <RadioGroup
+        android:id="@+id/rbSecretGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/rbLight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/design_default_color_primary_dark"
+            android:fontFamily="@font/medievalsharp"
+            android:text="Light Sensor"
+            android:textColor="@android:color/background_light"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/rbGesture"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/design_default_color_primary_dark"
+            android:fontFamily="@font/medievalsharp"
+            android:text="Gesture Controls"
+            android:textColor="@android:color/background_light"
+            android:textSize="18sp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/lblCheats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/medievalsharp"
+        android:paddingTop="100dp"
+        android:text="Cheats"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp"
+        android:typeface="serif" />
+
+
+            <CheckBox
+                android:id="@+id/cbInfiniteLives"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:background="@color/design_default_color_primary_dark"
+                android:text="Infinite Lives    "
+                android:textAlignment="center"
+                android:textColor="@android:color/background_light"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/cbHints"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:background="@color/design_default_color_primary_dark"
+                android:text="Hints"
+                android:textAlignment="center"
+                android:textColor="@android:color/background_light"
+                android:textSize="18sp" />
+
+            <TextView
+        android:id="@+id/lblPermissions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="25dp"
+        android:fontFamily="@font/medievalsharp"
+        android:text="Remember to Check Your Permissions!"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btnChange"
+        android:layout_width="200dp"
+        android:layout_height="38dp"
+        android:background="@drawable/buttonimage"
+        android:fontFamily="@font/medievalsharp"
+        android:onClick="saveChanges"
+        android:text="Save Changes"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnGoToTitle"
+                android:layout_width="200dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/buttonimage"
+                android:fontFamily="@font/medievalsharp"
+                android:onClick="goToTitle"
+                android:text="Go To Title"
+                android:textColor="@android:color/background_light"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
